@@ -1,20 +1,16 @@
 package com.example.demo.dto;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 
 public class AfiliadoDTO {
     private String nombre;
     private String apellido;
-    private String direccion;
-    private Long estado;
-    private String nroAfiliado;
-    private String transportista;
-    private String recorridos;
-    private String direccionhasta;
-    private String profesional;
+    private String horario;
+    private String description;
+    private String direccion_desde;
+    private String direccion_hasta;
+    private String obra_social;
+    private String nro_documento;
+    private String nro_afiliado;
 
     public String getNombre() {
         return nombre;
@@ -32,64 +28,59 @@ public class AfiliadoDTO {
         this.apellido = apellido;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getHorario() {
+        return horario;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setHorario(String horario) {
+        this.horario = horario;
     }
 
-    public Long getEstado() {
-        return estado;
+    public String getDescription() {
+        return description;
     }
 
-    public void setEstado(Long estado) {
-        this.estado = estado;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getNroAfiliado() {
-        return nroAfiliado;
+    public String getDireccion_desde() {
+        return direccion_desde;
     }
 
-    public void setNroAfiliado(String nroAfiliado) {
-        this.nroAfiliado = nroAfiliado;
+    public void setDireccion_desde(String direccion_desde) {
+        this.direccion_desde = direccion_desde;
     }
 
-    public String getTransportista() {
-        return transportista;
+    public String getDireccion_hasta() {
+        return direccion_hasta;
     }
 
-    public void setTransportista(String transportista) {
-        this.transportista = transportista;
+    public void setDireccion_hasta(String direccion_hasta) {
+        this.direccion_hasta = direccion_hasta;
     }
 
-    public String getRecorridos() {
-        return recorridos;
+    public String getObra_social() {
+        return obra_social;
     }
 
-    public void setRecorridos(String recorridos) {
-        this.recorridos = recorridos;
+    public void setObra_social(String obra_social) {
+        this.obra_social = obra_social;
     }
 
-    public String getDireccionhasta() {
-        return direccionhasta;
+    public String getNro_documento() {
+        return nro_documento;
     }
 
-    public void setDireccionhasta(String direccionhasta) {
-        this.direccionhasta = direccionhasta;
+    public void setNro_documento(String nro_documento) {
+        this.nro_documento = nro_documento;
     }
 
-    public String getProfesional() {
-        return profesional;
+    public String getNro_afiliado() {
+        return nro_afiliado;
     }
 
-    public void setProfesional(String profesional) {
-        this.profesional = profesional;
-    }
-
-    public List<Long> getParseRecorridos(String recorridos) {
-        String[] diasRecorridos = recorridos.split(",");
-        return Arrays.stream(diasRecorridos).map(str -> Long.parseLong(str)).collect(Collectors.toList());
+    public void setNro_afiliado(String nro_afiliado) {
+        this.nro_afiliado = nro_afiliado;
     }
 }

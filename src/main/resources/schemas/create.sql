@@ -1,4 +1,3 @@
-
 create table transportistas (
  id_transportista int auto_increment primary key,
  nombre varchar(50),
@@ -37,9 +36,15 @@ CREATE TABLE feriados
     description varchar(100)
 );
 
+
 insert into feriados (fecha_feriado,description) values ('2021-10-11 00:00:00','Día del Respeto a la Diversidad Cultural (12/10)');
 insert into feriados (fecha_feriado,description) values ('2021-10-08 00:00:00','Feriado Puente Turistico (12/10)');
 insert into feriados (fecha_feriado,description) values ('2021-08-16 00:00:00','Día del Paso a la Inmortalidad del Gral. José de San Martín (17/08).');
+insert into feriados (fecha_feriado,description) values ('2021-11-22 00:00:00','Día del Paso a la Inmortalidad del Gral. José de San Martín (17/08).');
+insert into feriados (fecha_feriado,description) values ('2021-12-08 00:00:00','Día de la virgen).');
+insert into feriados (fecha_feriado,description) values ('2021-12-24 00:00:00','Navidad).');
+insert into feriados (fecha_feriado,description) values ('2021-12-31 00:00:00','Año Nuevo).');
+insert into feriados (fecha_feriado,description) values ('2022-02-28 00:00:00','Feriado Carnaval).');
 
 insert into transportistas (nombre,apellido,cuit,nro_prestador) values ('Claudia Maria Elvira','Bordolli','232098555054','2379');
 insert into transportistas (nombre,apellido,cuit,nro_prestador) values ('Carlos Roberto','Barberis','20144089082','1466');
@@ -92,6 +97,20 @@ INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, 
 INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (46, 'FACUNDO TOMAS', 'ORTIZ', null, 'AV COLON 1315', 'Vera y Zarate 3275', null, 1, '126181812053', 'Fundacion Fadetea', 1);
 INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (47, 'ANA MARIA', 'CORTEZ', null, 'FELIX PAZ 1019', 'CASTRO BARROS 88', null, 1, '201060886014', 'Luciano Rovere', 1);
 INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (48, 'MARIA ANGELES', 'PERALTA', null, 'LA BANDA 3912 Barrio Parque Atlantica', 'DR Pablo Mirizzi 234', null, 1, '130122560033', 'Mercedes Bataglia', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (49, 'JULIAN BENJAMIN', 'PAEZ', null, 'MZNA 11 CASA 18 s/n Ampliacion Vicor', 'DR Pablo Mirizzi 234', null, 1, '125286990034', 'Mercedes Bataglia', 2);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (50, 'CYNTHIA GISELL', 'MIRETTI', null, 'GRAL BUSTOS 928 BARRIO 17 de Octubre Malagueño', 'Dean Funes 2327', null, 1, '221489618010', 'Fundacion Bonino', 2);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (51, 'EZEQUIEL URIEL', 'GIGENA RAMALLO', null, 'LEON 1974 Maipu Secc 1', 'Escuela Especial Beatriz M ALLIO Maestro lopez s/n C Universitaria', null, 1, '23763529046', 'Escuela ALLIO', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (52, 'TOMAS MATEO', 'GUTIERREZ', null, 'Tilcara 1012', 'Escuela Especial Beatriz M ALLIO Maestro lopez s/n C Universitaria', null, 1, '125268085082', 'Escuela ALLIO', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (53, 'JUAN FRANCISCO', 'VICICHI', null, 'Rossi s/n Centro Norte Montecristo', 'Rafael Nuñez 951 Pilar (Pcia de Cordoba)', null, 1, '228522922034', 'Romero Paola Andrea', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (54, 'MARIA A','CABALIA SFORZINI', null, 'HECTOR PANIZA 3172', 'Dean Funes 2327', null, 1, '217316561026', 'Fundacion Bonino', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (55, 'MATEO FRANCISCO', 'MERLO', null, 'Francisco Gurruchaga 650', 'Dr Pablo Mirizzi 234', null, 1, '125754803025', 'Fundacion Fadetea', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (56, 'LEONARDO LEONEL', 'SANCHEZ', null, 'LOS TINTINES-808-AMPLIACION-AMERICA', 'Dr Pablo Mirizzi 234', null, 1, '231668709025', '', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (57, 'SAYEN MAILEN', 'SANCHEZ GIL', null, 'ALONSO DE VERA Y ARAGON 680', 'Dr Pablo Mirizzi 234', null, 1, '225267106040', '', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (58, 'LIAN ENZO', 'MAIDANA', null, 'MANUEL ANDRADA 806 MALVINAS ARGENTINAS', 'DUARTE QUIROZ 828', null, 1, '130652042030', '', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (59, 'BELTRAN IGNACIO', 'LUDUEÑA', null, 'AGUARIGUAY MZNA 5 Lote 17 s/n VILLA SAN NICOLAS', 'VERA Y ZARATE 3275', null, 1, '133270128053', '', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (60, 'MATEO BAUTISTA', 'TOLOSA', null, 'TOMAS GUIDO 787 Dpto 26', 'Dr Pablo Mirizzi 234', null, 1, '137475357031', '', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (61, 'INDIRA ANTONELLA', 'CAMPOS', null, 'ALEJANDRO DANEL 2533', 'VERA Y ZARATE 3275', null, 1, '116083074042', '', 1);
+INSERT INTO afiliados (id_afiliado, nombre, apellido, nro_documento, direccion, direccion_hasta, telefono, estado, nro_afiliado, profesional, id_transportista) VALUES (62, 'ARIADNA V', 'BAIGORRI HERRERA', null, 'DR JOSE PIZARRO 583', 'VERA Y ZARATE 3275', null, 1, '231556798018', '', 1);
 
 
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (1, 1, 1);
@@ -230,8 +249,6 @@ INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (133, 3
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (134, 4, 33);
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (135, 5, 33);
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (136, 1, 34);
-INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (137, 2, 34);
-INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (138, 3, 34);
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (139, 4, 34);
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (140, 5, 34);
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (141, 1, 35);
@@ -292,3 +309,62 @@ INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (195, 5
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (196, 1, 48);
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (197, 4, 48);
 INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (198, 5, 48);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (199, 1, 49);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (200, 4, 49);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (201, 5, 49);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (202, 1, 50);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (203, 2, 50);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (204, 3, 50);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (205, 4, 50);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (206, 5, 50);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (207, 1, 51);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (208, 2, 51);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (209, 3, 51);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (210, 4, 51);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (211, 5, 51);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (212, 1, 52);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (213, 2, 52);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (214, 3, 52);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (215, 4, 52);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (216, 5, 52);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (217, 1, 53);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (218, 4, 53);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (219, 5, 53);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (220, 1, 54);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (221, 2, 54);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (222, 3, 54);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (223, 4, 54);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (224, 5, 54);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (225, 1, 55);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (226, 2, 55);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (227, 3, 55);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (228, 4, 55);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (229, 5, 55);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (230, 2, 56);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (231, 3, 56);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (232, 4, 56);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (233, 5, 56);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (234, 1, 57);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (235, 3, 57);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (236, 4, 57);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (237, 5, 57);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (238, 2, 58);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (239, 3, 58);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (240, 4, 58);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (241, 5, 58);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (242, 2, 59);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (243, 3, 59);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (244, 4, 59);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (245, 5, 59);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (246, 2, 60);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (247, 3, 60);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (248, 4, 60);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (249, 5, 60);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (250, 1, 61);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (251, 2, 61);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (252, 4, 61);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (253, 5, 61);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (254, 1, 62);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (255, 2, 62);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (256, 4, 62);
+INSERT INTO recorridos (id_recorrido, dia_recorrido, id_afiliado) VALUES (257, 5, 62);

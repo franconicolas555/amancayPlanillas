@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.utils.DateUtils;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @Service
 public class FeriadoService {
@@ -17,10 +18,16 @@ public class FeriadoService {
         this.feriadoRepository = feriadoRepository;
     }
 
-    public Integer getCountHolidaysMonth(Integer month) {
+    public List<Integer> getCountHolidaysMonth(Integer month) {
         Timestamp fecD = new Timestamp(DateUtils.getFirstDayMonth(month).getTimeInMillis());
         Timestamp fecH = new Timestamp(DateUtils.getLastDayMonth(month).getTimeInMillis());
         return feriadoRepository.getFeriados(fecD, fecH);
+    }
+
+    public List<String> getHolidaysMonth(Integer month) {
+        Timestamp fecD = new Timestamp(DateUtils.getFirstDayMonth(month).getTimeInMillis());
+        Timestamp fecH = new Timestamp(DateUtils.getLastDayMonth(month).getTimeInMillis());
+        return feriadoRepository.getFormatFeriados(fecD, fecH);
     }
 
 }

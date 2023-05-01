@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "recorridos")
@@ -15,6 +16,15 @@ public class Recorrido {
     @JsonProperty("diaRecorrido")
     @Column(name = "dia_recorrido")
     private Long diaRecorrido;
+    @JsonProperty("horaHasta")
+    @Column(name = "hora_hasta")
+    private String horaHasta;
+    @JsonProperty("horaDesde")
+    @Column(name = "hora_desde")
+    private String horaDesde;
+    @JsonProperty("description")
+    @Column(name = "description")
+    private Timestamp description;
     @JsonProperty("afiliado")
     @ManyToOne
     @JoinColumn(name = "id_afiliado")
@@ -42,5 +52,29 @@ public class Recorrido {
 
     public void setAfiliado(Afiliado afiliado) {
         this.afiliado = afiliado;
+    }
+
+    public String getHoraHasta() {
+        return horaHasta;
+    }
+
+    public void setHoraHasta(String horaHasta) {
+        this.horaHasta = horaHasta;
+    }
+
+    public String getHoraDesde() {
+        return horaDesde;
+    }
+
+    public void setHoraDesde(String horaDesde) {
+        this.horaDesde = horaDesde;
+    }
+
+    public Timestamp getDescription() {
+        return description;
+    }
+
+    public void setDescription(Timestamp description) {
+        this.description = description;
     }
 }

@@ -1,6 +1,5 @@
 package com.example.demo.service;
 
-import com.example.demo.controllers.AfiliadoController;
 import com.example.demo.dto.AfiliadoDTO;
 import com.example.demo.entity.Afiliado;
 import com.example.demo.entity.Recorrido;
@@ -12,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -45,23 +45,37 @@ public class AfiliadoService {
 
     }
 
+    public List<Afiliado> findAll() {
+        try {
+            return (List<Afiliado>) afiliadoRepository.findAll();
+        } catch (Exception ex) {
+            Log.error("error in getAfiliadoService ex {}", ex);
+            throw ex;
+        }
+
+    }
+
     public void insertAfiliado(AfiliadoDTO afiliadoDTO) {
         try {
             Afiliado afiliado = new Afiliado();
             afiliado.setApellido(afiliadoDTO.getApellido());
             afiliado.setNombre(afiliadoDTO.getNombre());
-            afiliado.setDireccion(afiliadoDTO.getDireccion());
-            afiliado.setEstado(afiliadoDTO.getEstado());
-            afiliado.setNroAfiliado(afiliadoDTO.getNroAfiliado());
-            afiliado.setTransportista(new Transportista(Long.parseLong(afiliadoDTO.getTransportista())));
-            afiliado.setDireccionHasta(afiliadoDTO.getDireccionhasta());
-            afiliado.setProfesional(afiliadoDTO.getProfesional());
+            afiliado.setProfesional(afiliadoDTO.getDescription());
+            afiliado.setDireccionHasta(afiliadoDTO.getDireccion_hasta());
+            afiliado.setDireccion(afiliadoDTO.getDireccion_desde());
+            afiliado.setObraSocial(afiliadoDTO.getObra_social());
+            afiliado.setTransportista(new Transportista(1L));
+            afiliado.setNroDocumento(afiliadoDTO.getNro_documento());
+            afiliado.setNroAfiliado(afiliadoDTO.getNro_afiliado());
             Afiliado idAfiliado = afiliadoRepository.save(afiliado);
             Log.info("afiliado cargado correctamente afiliado {}", afiliado.getIdAfiliado());
-            afiliadoDTO.getParseRecorridos(afiliadoDTO.getRecorridos()).stream().forEach(diaRecorrido -> {
+            Arrays.asList(afiliadoDTO.getHorario().split(",")).stream().forEach(string -> {
+                String[] fields = string.split("-");
                 Recorrido recorrido = new Recorrido();
-                recorrido.setDiaRecorrido(diaRecorrido);
+                recorrido.setDiaRecorrido(Long.parseLong(fields[0]));
                 recorrido.setAfiliado(idAfiliado);
+                recorrido.setHoraDesde(fields.length > 1 ? fields[1] : null);
+                recorrido.setHoraHasta(fields.length > 2 ? fields[2] : null);
                 recorridoRepository.save(recorrido);
                 Log.info("recorrido cargado correctamente afiliado {} recorrido {}", afiliado.getIdAfiliado(), recorrido.getDiaRecorrido());
             });

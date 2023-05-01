@@ -33,6 +33,8 @@ public class Afiliado {
     private String nroAfiliado;
     @Column(name = "profesional")
     private String profesional;
+    @Column(name = "obra_social")
+    private String obraSocial;
     @JsonProperty("transportista")
     @ManyToOne
     @JoinColumn(name = "id_transportista")
@@ -124,5 +126,13 @@ public class Afiliado {
 
     public void setProfesional(String profesional) {
         this.profesional = profesional;
+    }
+
+    public String getObraSocial() {
+        return obraSocial;
+    }
+
+    public void setObraSocial(String obraSocial) {
+        this.obraSocial = obraSocial;
     }
 }

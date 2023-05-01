@@ -33,6 +33,22 @@ public class DateUtils {
         return calhh;
     }
 
+    public static String getDayOfWeek(Long day) {
+        String month = "";
+        if (day == 1L) {
+            month = "LUNES";
+        } else if (day == 2) {
+            month = "MARTES";
+        } else if (day == 3) {
+            month = "MIERCOLES";
+        } else if (day == 4) {
+            month = "JUEVES";
+        } else if (day == 5) {
+            month = "VIERNES";
+        }
+        return month;
+    }
+
 
     public static Integer getMonth(String monthString) {
         Integer month = 0;
